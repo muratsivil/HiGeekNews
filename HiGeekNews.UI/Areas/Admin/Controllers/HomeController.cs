@@ -13,5 +13,17 @@ namespace HiGeekNews.UI.Areas.Admin.Controllers
         {
             return View();
         }
+        public ActionResult CreationPage()
+        {
+            return View(); 
+        }
+        public ActionResult ListingPage()
+        { 
+            return View();
+        }
+        public ActionResult Settings()
+        {
+            return View();
+        }
     }
 }

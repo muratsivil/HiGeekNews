@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+@model HiGeekNews.UI.Areas.Admin.Data.VMs.CreatePostVM
+
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-danger">
+                <div class="box-header">
+                    <h4>Create a Post</h4>
+                </div>
+                <div class="box-body">
+                    <form action="/Admin/Post/Create" method="post" role="form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="Header">Header</label>
+                            <input type="text" name="Header" class="form-control" placeholder="Header" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Content">Content</label>
+                            <input type="text" name="Content" class="form-control" placeholder="Content" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="CategoryId">Choose a Category</label>
+                            <select name="CategoryId" class="form-control">
+                                @foreach (var item in Model.Categories)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="AppUserId">Choose a Author</label>
+                            <select name="AppUserId" class="form-control">
+                                @foreach (var item in Model.AppUsers)
+                                {
+                                    <option value="@item.Id">@item.UserName</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Image">Choose a Image</label>
+                            <input type="file" name="Image" value="" class="form-control btn btn-default" />
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="box-footer">
+                    <a href="/Admin/AppUser/List" class="btn btn-block btn-warning">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

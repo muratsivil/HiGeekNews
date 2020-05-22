@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+@model HiGeekNews.Entity.Entities.Post
+
+<section class="content">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="box box-widget">
+                <div class="box-header with-border">
+                    <div class="user-block">
+                        <img class="img-circle" src="@Model.AppUser.XSmallUserImage" alt="User Image">
+                        <span class="username"><a href="#">@Model.AppUser.UserName</a></span>
+                        <span class="description">Shared publicly - @Model.PublishDate.Value.ToShortDateString()</span>
+                    </div>    
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <img class="img-responsive pad" src="@Model.ImagePath" alt="Photo">
+                    <button type="button" class="btn btn-default btn-xs"><i class="fa fa-share"></i> Share</button>
+                    <button type="button" class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
+                    <span class="pull-right text-muted">@Model.Likes.Count() likes - @Model.Comments.Count() comments</span>
+                    <p>
+                        <h4>@Model.Header</h4>
+                    </p>
+                    <p>@Model.Content</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

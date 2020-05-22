@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+    <section class="content">
+
+        <div class="row">
+            <div class="col-md-3">
+
+                <!-- Profile Image -->
+                <div class="box box-primary">
+                    <div class="box-body box-profile">
+                        <img class="profile-user-img img-responsive img-circle" src="@Session["ImagePath"]" alt="User profile picture">
+
+                        <h3 class="profile-username text-center">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                @Session["UserName"]
+                            }
+                        </h3>
+
+                        <p class="text-muted text-center">@Session["Role"]</p>       
+
+                        <a href="/Account/LogOut" class="btn btn-primary btn-block"><b>Sign Out</b></a>
+                    </div>
+                    <!-- /.box-body -->
+                </div>    
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Admin Proccesses</h3>
+                    </div>
+                    <div class="box-body">
+                        <a class="btn btn-app" href="/Admin/Home/CreationPage">
+                            <i class="fa fa-edit"></i> Creation
+                        </a>
+                        <a class="btn btn-app" href="/Admin/Home/ListingPage">
+                            <i class="fa fa-play"></i> Listing
+                        </a>
+                        <a class="btn btn-app">
+                            <i class="fa fa-repeat"></i> Show
+                        </a>
+                        <a class="btn btn-app">
+                            <i class="fa fa-pause"></i> Change your settings
+                        </a>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.nav-tabs-custom -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+    </section>
+    
+

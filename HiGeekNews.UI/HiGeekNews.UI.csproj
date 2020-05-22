@@ -124,6 +124,13 @@
     <Content Include="Areas\Admin\Views\Category\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Category\List.cshtml" />
     <Content Include="Areas\Admin\Views\Category\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Detail.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\CreationPage.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\ListingPage.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -149,13 +156,19 @@
     <Compile Include="Areas\Admin\Controllers\AppUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PostController.cs" />
     <Compile Include="Areas\Admin\Data\DTO\AppUserDTO.cs" />
     <Compile Include="Areas\Admin\Data\DTO\CategoryDTO.cs" />
+    <Compile Include="Areas\Admin\Data\DTO\PostDTO.cs" />
+    <Compile Include="Areas\Admin\Data\VMs\CreatePostVM.cs" />
+    <Compile Include="Areas\Admin\Data\VMs\UpdatePostVM.cs" />
     <Compile Include="Areas\Author\AuthorAreaRegistration.cs" />
     <Compile Include="Areas\Member\MemberAreaRegistration.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DTOs\LoginDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +188,8 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -184,7 +199,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Views\Home\" />
     <Folder Include="Areas\Author\Controllers\" />
     <Folder Include="Areas\Author\Data\" />
     <Folder Include="Areas\Author\Views\Shared\" />
@@ -193,8 +207,7 @@
     <Folder Include="Areas\Member\Views\Shared\" />
     <Folder Include="Content\Uploads\UserImages\CruptedImages\" />
     <Folder Include="Content\Uploads\UserImages\XSmallImages\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Models\VMs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HiGeekNews.Entity\HiGeekNews.Entity.csproj">

@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-danger">
+
+                <div class="box-header">
+                    <h4>Add User</h4>
+                </div>
+
+                <div class="box-body">
+                    <form action="/Admin/AppUser/Create" method="post" role="form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="FirstName">First Name:</label>
+                            <input type="text" name="FirstName" class="form-control" placeholder="First Name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="LastName">Last Name:</label>
+                            <input type="text" name="LastName" class="form-control" placeholder="Last Name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="UserName">User Name:</label>
+                            <input type="text" name="UserName" class="form-control" placeholder="User Name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email:</label>
+                            <input type="text" name="Email" class="form-control" placeholder="Email Address" />
+                        </div>
+                        <div class="form-group">
+                            <label for="PhoneNumber">Phone Number:</label>
+                            <input type="text" name="PhoneNumber" class="form-control" placeholder="Phone Number" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Password:</label>
+                            <input type="password" name="Password" class="form-control" placeholder="Password.." />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Role">Choose a role:</label>
+                            <select name="Role" class="form-control">
+                                @foreach (var item in Enum.GetNames(typeof(HiGeekNews.Entity.Enums.Role)))
+                                {
+                                    <option value="@item">@item</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Image">Choose a Picture:</label>
+                            <input type="file" name="Image" class="form-control" />
+                        </div>
+                        <div class="form-group" style="float:right">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="box-footer">
+                    <a href="/Admin/AppUser/List" class="btn btn-warning btn-block">List of Users</a>
+                </div>
+                <div class="box-footer">
+                    <a href="/Admin/Category/Create" class="btn btn-warning btn-block">Create New Category</a>
+                </div>
+                <div class="box-footer">
+                    <a href="/Admin/Post/Create" class="btn btn-warning btn-block">Create New Post</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

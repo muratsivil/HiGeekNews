@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+    <section class="content">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box box-danger">
+                    <div class="box-header">
+                        <h4>Add Category</h4>
+                    </div>
+                    <div class="box-body">
+                        <form action="/Admin/Category/Create" method="post" role="form">
+                            <div class="form-group">
+                                <label for="Name">Category Name</label>
+                                <input type="text" name="Name" class="form-control" placeholder="Category Name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="Description">Description</label>
+                                <textarea class="form-control" name="Description" rows="3" placeholder="Description ..." style="margin: 0px 9.96226px 0px 0px; width: 656px; height: 101px;"></textarea>
+                            </div>
+                            <div class="form-group" style="float:right">
+                                <button type="submit" class="btn btn-danger">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="box-footer">
+                        <a href="/Admin/Category/List" class="btn btn-block btn-warning">Back to List</a>
+                    </div>
+                    <div class="box-footer">
+                        <a href="/Admin/AppUser/Create" class="btn btn-block btn-warning">Create New User</a>
+                    </div>
+                    <div class="box-footer">
+                        <a href="/Admin/Post/Create" class="btn btn-block btn-warning">Create New Post</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

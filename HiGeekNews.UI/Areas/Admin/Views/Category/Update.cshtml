@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+@model HiGeekNews.UI.Areas.Admin.Data.DTO.CategoryDTO
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box box-danger">
+                <div class="box-header">
+                    <h4>Update Category</h4>
+                </div>
+                <div class="box-body">
+                    <form action="/Admin/Category/Update" method="post" role="form">
+                        <input type="text" style="visibility:hidden" name="Id" value="@Model.Id" />
+                        <div class="form-group">
+                            <label for="Name">Category Name</label>
+                            <input type="text" name="Name" value="@Model.Name" class="form-control" placeholder="Category Name" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Description">Description</label>
+                            <input type="text" name="Description" value="@Model.Description" class="form-control" placeholder="Description" />
+                        </div>
+                        
+                        <div class="form-group" style="float:right">
+                            <button type="submit" class="btn btn-danger">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="box-footer">
+                    <a href="/Admin/Category/List" class="btn btn-block btn-warning">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

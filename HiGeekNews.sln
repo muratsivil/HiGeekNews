@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiGeekNews.UI", "HiGeekNews.UI\HiGeekNews.UI.csproj", "{EC4D1DC3-F256-43AD-AC3A-F405D6429094}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiGeekNews.Utility", "HiGeekNews.Utility\HiGeekNews.Utility.csproj", "{235B1E42-1D82-4520-BF66-EDA35B4067EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiGeekNews.Entity", "HiGeekNews.Entity\HiGeekNews.Entity.csproj", "{E1D1F8EE-29FC-42E4-A54A-D863B6332146}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiGeekNews.Service", "HiGeekNews.Service\HiGeekNews.Service.csproj", "{B511AF58-3167-4635-9E07-8498C21C8A43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiGeekNews.Map", "HiGeekNews.Map\HiGeekNews.Map.csproj", "{A6344E7A-1029-476A-BE83-AE21B98D548D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiGeekNews.DAL", "HiGeekNews.DAL\HiGeekNews.DAL.csproj", "{B680475B-8E7E-4D4E-B711-61905C304891}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC4D1DC3-F256-43AD-AC3A-F405D6429094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4D1DC3-F256-43AD-AC3A-F405D6429094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4D1DC3-F256-43AD-AC3A-F405D6429094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4D1DC3-F256-43AD-AC3A-F405D6429094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{235B1E42-1D82-4520-BF66-EDA35B4067EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{235B1E42-1D82-4520-BF66-EDA35B4067EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{235B1E42-1D82-4520-BF66-EDA35B4067EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{235B1E42-1D82-4520-BF66-EDA35B4067EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D1F8EE-29FC-42E4-A54A-D863B6332146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D1F8EE-29FC-42E4-A54A-D863B6332146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D1F8EE-29FC-42E4-A54A-D863B6332146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D1F8EE-29FC-42E4-A54A-D863B6332146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B511AF58-3167-4635-9E07-8498C21C8A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B511AF58-3167-4635-9E07-8498C21C8A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B511AF58-3167-4635-9E07-8498C21C8A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B511AF58-3167-4635-9E07-8498C21C8A43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6344E7A-1029-476A-BE83-AE21B98D548D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6344E7A-1029-476A-BE83-AE21B98D548D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6344E7A-1029-476A-BE83-AE21B98D548D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6344E7A-1029-476A-BE83-AE21B98D548D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B680475B-8E7E-4D4E-B711-61905C304891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B680475B-8E7E-4D4E-B711-61905C304891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B680475B-8E7E-4D4E-B711-61905C304891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B680475B-8E7E-4D4E-B711-61905C304891}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5BB5723-5251-49D3-B9FB-780BD1A19A1D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayoutPage.cshtml";
+}
+
+@model List<HiGeekNews.Entity.Entities.Category>
+
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-danger">
+                <div class="box-header">
+                    <h4>List of Categories</h4>
+                </div>
+                <div class="box-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.Name</td>
+                                    <td>@item.Description</td>
+                                    <td>@item.Status</td>
+                                    <td>
+                                        <a href="/Admin/Category/Update/@item.Id" class="btn btn-warning">Update</a> |
+                                        <a href="/Admin/Category/Delete/@item.Id" class="btn btn-danger">Delete</a>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer">
+                    <a href="/Admin/Category/Create" class="btn btn-block btn-primary">Add the New One</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
